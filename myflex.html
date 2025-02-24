@@ -54,12 +54,76 @@
         flex-direction: row;
     }
   }
+
+  nav{
+    display:flex;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo{
+    font-size: 24px;
+    color: white;
+  }
+
+  ul{
+    display:flex;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+  }
+
+  a{
+    color: white;
+    margin: 10px;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  ul:hover{
+    background-color: blue;
+  }
+
+  @media (max-width: 600px) {
+    nav{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav .logo {
+        padding-bottom: 10px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start; 
+      justify-content: flex-start;
+      width: 100%; 
+      padding-left: 0;
+    }
+
+    nav li{
+        padding: 10px;
+    }
+  }
+
+  
 </style>
 
 </head>
 <body>
     <header>
         <h1>FlexBox practice</h1>
+        <nav> 
+          <div class="logo">Logo</div>
+          <ul>
+            <li><a href="https://www.example.com">Home</a></li>
+            <li><a href="https://www.example.com">About</a></li>
+            <li><a href="https://www.example.com">Service</a></li>
+            <li><a href="https://www.example.com">Contact</a></li>
+          </ul>
+        </nav>
     </header>
 
     <main>
